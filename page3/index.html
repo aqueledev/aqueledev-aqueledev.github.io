@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chats</title>
+</head>
+
+<body>
+  <h1>Rubini e Jonvlogs</h1>
+
+  <iframe id="rubini" frameborder="5px" scrolling="yes"
+    src="https://www.twitch.tv/embed/rubini/chat?parent=aqueledev.github.io" height="450" width="315">
+  </iframe>
+
+  <iframe id="jonvlogs" frameborder="5px" scrolling="yes"
+    src="https://www.twitch.tv/embed/jonvlogs/chat?parent=aqueledev.github.io" height="450" width="315">
+  </iframe>
+
+  <iframe id="semnickbr" frameborder="5px" scrolling="yes"
+    src="https://www.twitch.tv/embed/semnickbr/chat?parent=aqueledev.github.io" height="450" width="315">
+  </iframe>
+
+</body>
+
+<script>
+  // Check element ID no html
+  var checkIDrubini = document.getElementById("rubini").getAttribute("src");
+  var checkIDjonvlogs = document.getElementById("jonvlogs").getAttribute("src");
+  var checkIDsemnickbr = document.getElementById("semnickbr").getAttribute("src");
+
+
+  // var com o link da live
+  var varrubini = "https://www.twitch.tv/embed/rubini/chat?parent=aqueledev.github.io";
+  var varjonvlogs = "https://www.twitch.tv/embed/jonvlogs/chat?parent=aqueledev.github.io";
+  var varsemnickbr = "https://www.twitch.tv/embed/semnickbr/chat?parent=aqueledev.github.io";
+
+
+
+  setInterval(function () {
+
+    if (checkIDrubini != varrubini) {
+      document.getElementById('rubini').src = document.getElementById('rubini').src;
+      console.log("Reload rubini");
+    } else {
+      // console.log("Nao recarregou");
+    }
+
+    if (checkIDjonvlogs != varjonvlogs) {
+      document.getElementById('jonvlogs').src = document.getElementById('jonvlogs').src;
+      console.log("Reload Sterin");
+    } else {
+      // console.log("Nao recarregou");
+    }
+
+    if (checkIDsemnickbr != varsemnickbr) {
+      document.getElementById('semnickbr').src = document.getElementById('semnickbr').src;
+      console.log("Reload semnickbr");
+    } else {
+      // console.log("Nao recarregou");
+    }
+
+
+  }, 5000);
+
+</script>
+
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chats</title>
+</head>
+
+<body>
+  <h1>Stereo e Gaules</h1>
+
+  <iframe id="sterinrr" frameborder="5px" scrolling="yes"
+    src="https://www.twitch.tv/embed/sterinrr/chat?parent=aqueledev.github.io" height="450" width="315">
+  </iframe>
+
+  <iframe id="stereonline" frameborder="5px" scrolling="yes"
+    src="https://www.twitch.tv/embed/stereonline/chat?parent=aqueledev.github.io" height="450" width="315">
+  </iframe>
+
+  <iframe id="gaules" frameborder="5px" scrolling="yes"
+    src="https://www.twitch.tv/embed/gaules/chat?parent=aqueledev.github.io" height="450" width="315">
+  </iframe>
+
+</body>
+
+<script>
+  // Check element ID no html
+  var checkIDsterinrr = document.getElementById("sterinrr").getAttribute("src");
+  var checkIDstereonline = document.getElementById("stereonline").getAttribute("src");
+  var checkIDgaules = document.getElementById("gaules").getAttribute("src");
+
+
+  // var com o link da live
+  var varSterinrr = "https://www.twitch.tv/embed/sterinrr/chat?parent=aqueledev.github.io";
+  var varStereonline = "https://www.twitch.tv/embed/stereonline/chat?parent=aqueledev.github.io";
+  var varGaules = "https://www.twitch.tv/embed/gaules/chat?parent=aqueledev.github.io";
+
+
+
+  setInterval(function () {
+
+    if (checkIDsterinrr != varSterinrr) {
+      document.getElementById('sterinrr').src = document.getElementById('sterinrr').src;
+      console.log("Reload SterinRR");
+    } else {
+      // console.log("Nao recarregou");
+    }
+
+    if (checkIDstereonline != varStereonline) {
+      document.getElementById('stereonline').src = document.getElementById('stereonline').src;
+      console.log("Reload Sterin");
+    } else {
+      // console.log("Nao recarregou");
+    }
+
+    if (checkIDgaules != varGaules) {
+      document.getElementById('gaules').src = document.getElementById('gaules').src;
+      console.log("Reload Gaules");
+    } else {
+      // console.log("Nao recarregou");
+    }
+
+
+  }, 5000);
+
+</script>
+
+</html>

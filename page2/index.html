@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chats</title>
+</head>
+
+<body>
+  <h1>Skipinho e Nobru</h1>
+
+  <iframe id="skipnho" frameborder="5px" scrolling="yes"
+    src="https://www.twitch.tv/embed/skipnho/chat?parent=aqueledev.github.io" height="450" width="315">
+  </iframe>
+
+  <iframe id="skipnholive" frameborder="5px" scrolling="yes"
+    src="https://www.twitch.tv/embed/skipnholive/chat?parent=aqueledev.github.io" height="450" width="315">
+  </iframe>
+
+  <iframe id="nobru" frameborder="5px" scrolling="yes"
+    src="https://www.twitch.tv/embed/nobru/chat?parent=aqueledev.github.io" height="450" width="315">
+  </iframe>
+
+</body>
+
+<script>
+  // Check element ID no html
+  var checkIDskipnho = document.getElementById("skipnho").getAttribute("src");
+  var checkIDskipnholive = document.getElementById("skipnholive").getAttribute("src");
+  var checkIDnobru = document.getElementById("nobru").getAttribute("src");
+
+
+  // var com o link da live
+  var varskipnho = "https://www.twitch.tv/embed/skipnho/chat?parent=aqueledev.github.io";
+  var varskipnholive = "https://www.twitch.tv/embed/skipnholive/chat?parent=aqueledev.github.io";
+  var varnobru = "https://www.twitch.tv/embed/nobru/chat?parent=aqueledev.github.io";
+
+
+
+  setInterval(function () {
+
+    if (checkIDskipnho != varskipnho) {
+      document.getElementById('skipnho').src = document.getElementById('skipnho').src;
+      console.log("Reload skipnho");
+    } else {
+      // console.log("Nao recarregou");
+    }
+
+    if (checkIDskipnholive != varskipnholive) {
+      document.getElementById('skipnholive').src = document.getElementById('skipnholive').src;
+      console.log("Reload Sterin");
+    } else {
+      // console.log("Nao recarregou");
+    }
+
+    if (checkIDnobru != varnobru) {
+      document.getElementById('nobru').src = document.getElementById('nobru').src;
+      console.log("Reload nobru");
+    } else {
+      // console.log("Nao recarregou");
+    }
+
+
+  }, 5000);
+
+</script>
+
+</html>
